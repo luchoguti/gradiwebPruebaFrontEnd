@@ -53,3 +53,7 @@ jobs:
           name: "Run Tests"
           command: ./vendor/bin/phpunit tests/Feature/testVehicle.php
 
+      - run:
+           name: "Run Tests two"
+           command: ./vendor/bin/phpunit tests/Feature/testVehicleOwn.php
+
