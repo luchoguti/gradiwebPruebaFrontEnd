@@ -51,5 +51,5 @@ jobs:
       # run tests with phpunit
       - run:
           name: "Run Tests"
-          command: ./vendor/bin/phpunit tests/Feature/testVehicle.php ./vendor/bin/phpunit tests/Feature/testVehicleOwn.php
+          command: ./vendor/bin/phpunit tests/Feature/testVehicle.php
 
