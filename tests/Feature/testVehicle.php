@@ -13,19 +13,25 @@ use Tests\TestCase;
 class testVehicle extends TestCase
 {
     use RefreshDatabase;
-    /** @test  **/
-    public function test_search_vehicle_for_plate()
+    /**
+     * A basic feature test search.
+     *
+     * @return void
+     */
+    public function testSearchVehicleForPlate()
     {
         $this->withoutExceptionHandling ();
-        $this->create_vehicle_and_own ();
+        $this->testCreateVehicleAndOwn ();
         $value = "HYU-890";
         $response = $this->get("/api/searchVehicleForPlate/$value");
         $response->assertOk ();
     }
     /**
-     * @test
+     * A basic feature test create.
+     *
+     * @return void
      */
-    public function create_vehicle_and_own (){
+    public function testCreateVehicleAndOwn (){
         $this->withoutExceptionHandling ();
         $number_ident = '5678919';
         $number_plate = 'HYU-890';
@@ -53,9 +59,11 @@ class testVehicle extends TestCase
         $this->assertEquals ($post_two->name,$name);
     }
     /**
-     * @test
+     * A basic feature test search vehicle for number licence.
+     *
+     * @return void
      */
-    public function search_vehicle_for_number_licence()
+    public function testSearchVehicleForNumberLicence()
     {
         $this->withoutExceptionHandling ();
         factory (Trademark::class,10)->create ();
