@@ -9,7 +9,6 @@ jobs:
       # Specify the version you desire here
       - image: circleci/php:7.2.5-node-browsers
 
-
     steps:
       - checkout
 
